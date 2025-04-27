@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeproxyvpn.github.io/news/article-103568.htm" />
+    <title>python读取文件夹的文件名</title>
+        <meta name="description" content="python获取当前文件夹下所有文件名【附代码】 # 导入os模块 import os  # path定义要获取的文件名称的目录（C盘除外） path = "E:\工作表格\数据统计\网站日志\日志"" />
+        <meta charset="utf-8">
+    <link rel="icon" href="/assets/website/img/clash_nodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费代理VPN 机场订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeproxyvpn.github.io/news/article-103568.htm" />
+    <meta property="og:site_name" content="免费代理VPN 机场订阅官网" />
+    <meta property="og:title" content="python读取文件夹的文件名" />
+    <meta property="og:image" content="https://freeproxyvpn.github.io/uploads/20240414/a1c2c38ec5e855980aff9d03bfc9b0c9.webp" />
+        <meta property="og:release_date" content="2025-04-25T07:07:11" />
+    <meta property="og:updated_time" content="2025-04-25T07:07:11" />
+        <meta property="og:description" content="python获取当前文件夹下所有文件名【附代码】 # 导入os模块 import os  # path定义要获取的文件名称的目录（C盘除外） path = "E:\工作表格\数据统计\网站日志\日志"" />
+        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python读取文件夹的文件名">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WPF9EPXW8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9WPF9EPXW8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="/assets/website/js/frontend/clash_nodes/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/about.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/about_responsive.css">
+</head>
+
+<body data-page="detail">
+    <div class="super_container">
+                <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo">免费代理VPN</div>
+                            <nav class="main_nav">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                    </ul>
+                            </nav>
+                            <div class="social header_social">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Menu -->
+        <div class="menu">
+            <div class="menu_content d-flex flex-column align-items-center justify-content-center">
+                <ul class="menu_nav_list text-center">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="#">关于</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Home -->
+        <div class="home">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-href="/assets/website/img/clash_nodes/about.jpg" data-speed="0.8"></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content">
+                                <div class="home_title">python读取文件夹的文件名</div>
+                                <div class="breadcrumbs">
+                                    <ul class="d-flex flex-row align-items-center justify-content-start">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li>正文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Classes -->
+        <div class="classes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row row-eq-height">
+                            <div class="col-md-12">
+                                                <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>python获取当前文件夹下所有文件名【附代码】</p> <pre><code># 导入os模块 import os  # path定义要获取的文件名称的目录（C盘除外） path = "E:\工作表格\数据统计\网站日志\日志"  # os.listdir()方法获取文件夹名字，返回数组 file_name_list = os.listdir(path)  # 转为转为字符串 file_name = str(file_name_list)  # replace替换"["、"]"、" "、"'" file_name = file_name.replace("[", "").replace("]", "").replace("'", "").replace(",", "\n").replace(" ", "") # 创建并打开文件list.txt f = open(path + "\\" + "文件list.txt", "a")  # 将文件下名称写入到"文件list.txt" f.write(file_name) </code></pre> <p>在这里插入图片描述</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-102761.htm">养猫最忌讳的一个生肖羊是什么动物（什么生肖养猫会有好运）</a></p>
+                                        <p>下一个：<a href="/news/article-103571.htm">中国兽药厂家二十强企业 中国兽药厂家二十强企业有哪些</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-94606.htm" title="旋转矩阵与欧拉角的相互转换">旋转矩阵与欧拉角的相互转换</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-19-free-subscribe-node.htm" title="免费代理VPN | 4月19日20.4M/S|免费V2ray/Clash/SSR/Shadowrocket订阅机场">免费代理VPN | 4月19日20.4M/S|免费V2ray/Clash/SSR/Shadowrocket订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-16-free-node-subscribe.htm" title="免费代理VPN | 4月16日18.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅机场">免费代理VPN | 4月16日18.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅机场</a></li>
+                        <li class="py-2"><a href="/news/article-102761.htm" title="养猫最忌讳的一个生肖羊是什么动物（什么生肖养猫会有好运）">养猫最忌讳的一个生肖羊是什么动物（什么生肖养猫会有好运）</a></li>
+                        <li class="py-2"><a href="/news/article-92321.htm" title="兽医资格证自考需要什么条件怎么报名（自学兽医考证）">兽医资格证自考需要什么条件怎么报名（自学兽医考证）</a></li>
+                        <li class="py-2"><a href="/news/article-95371.htm" title="动物医疗有限公司起名大全 动物医疗有限公司起名大全及寓意">动物医疗有限公司起名大全 动物医疗有限公司起名大全及寓意</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-23-clash-v2ray-ss-ssr.htm" title="免费代理VPN | 4月23日19.5M/S|免费SSR/V2ray/Clash/Shadowrocket订阅机场">免费代理VPN | 4月23日19.5M/S|免费SSR/V2ray/Clash/Shadowrocket订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-26-clash-v2ray-ss-ssr.htm" title="免费代理VPN | 4月26日18.6M/S|免费Clash/Shadowrocket/SSR/V2ray订阅机场">免费代理VPN | 4月26日18.6M/S|免费Clash/Shadowrocket/SSR/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/news/article-96113.htm" title="springboot整合微信支付过程详解（附源码，亲测可用）">springboot整合微信支付过程详解（附源码，亲测可用）</a></li>
+                        <li class="py-2"><a href="/news/article-101184.htm" title="开一个宠物零食工厂多少钱啊（开个宠物零食店需要多少钱）">开一个宠物零食工厂多少钱啊（开个宠物零食店需要多少钱）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">52</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-href="/assets/website/img/clash_nodes/footer.jpg" data-speed="0.8"></div>
+            <div class="footer_overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer_content text-center d-flex flex-column align-items-center justify-content-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                免费代理VPN 机场订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/assets/website/js/frontend/clash_nodes/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/css/clash_nodes/bootstrap-4.1.2/popper.js"></script>
+    <script src="/assets/website/css/clash_nodes/bootstrap-4.1.2/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/owl.carousel.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/easing/easing.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/about.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

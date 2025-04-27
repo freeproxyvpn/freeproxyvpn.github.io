@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeproxyvpn.github.io/news/article-102759.htm" />
+    <title>Git撤销&amp;回滚操作</title>
+        <meta name="description" content="开发过程中，你肯定会遇到这样的场景： 场景一：  糟了，我刚把不想要的代码，commit到本地仓库中了，但是还没有做push操作！  场景二：  彻底完了，刚线上更新的代码出现问题了，需要还原这次提交" />
+        <meta charset="utf-8">
+    <link rel="icon" href="/assets/website/img/clash_nodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费代理VPN 机场订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeproxyvpn.github.io/news/article-102759.htm" />
+    <meta property="og:site_name" content="免费代理VPN 机场订阅官网" />
+    <meta property="og:title" content="Git撤销&amp;回滚操作" />
+    <meta property="og:image" content="https://freeproxyvpn.github.io/uploads/20240414/a1c2c38ec5e855980aff9d03bfc9b0c9.webp" />
+        <meta property="og:release_date" content="2025-04-24T09:16:00" />
+    <meta property="og:updated_time" content="2025-04-24T09:16:00" />
+        <meta property="og:description" content="开发过程中，你肯定会遇到这样的场景： 场景一：  糟了，我刚把不想要的代码，commit到本地仓库中了，但是还没有做push操作！  场景二：  彻底完了，刚线上更新的代码出现问题了，需要还原这次提交" />
+        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Git撤销&amp;回滚操作">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WPF9EPXW8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9WPF9EPXW8');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="/assets/website/js/frontend/clash_nodes/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/js/frontend/clash_nodes/plugins/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/about.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/clash_nodes/about_responsive.css">
+</head>
+
+<body data-page="detail">
+    <div class="super_container">
+                <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo">免费代理VPN</div>
+                            <nav class="main_nav">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                    </ul>
+                            </nav>
+                            <div class="social header_social">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Menu -->
+        <div class="menu">
+            <div class="menu_content d-flex flex-column align-items-center justify-content-center">
+                <ul class="menu_nav_list text-center">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="#">关于</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Home -->
+        <div class="home">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-href="/assets/website/img/clash_nodes/about.jpg" data-speed="0.8"></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content">
+                                <div class="home_title">Git撤销&amp;回滚操作</div>
+                                <div class="breadcrumbs">
+                                    <ul class="d-flex flex-row align-items-center justify-content-start">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li>正文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Classes -->
+        <div class="classes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row row-eq-height">
+                            <div class="col-md-12">
+                                                <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>开发过程中，你肯定会遇到这样的场景：</p> <p><strong>场景一：</strong></p> <blockquote> <p>糟了，我刚把不想要的代码，commit到本地仓库中了，但是还没有做push操作！</p> </blockquote> <p><strong>场景二：</strong></p> <blockquote> <p>彻底完了，刚线上更新的代码出现问题了，需要还原这次提交的代码！</p> </blockquote> <p><strong>场景三：</strong></p> <blockquote> <p>刚才我发现之前的某次提交太愚蠢了，现在想要干掉它！</p> </blockquote> <h2>撤销</h2> <p>上述<strong>场景一</strong>，在未进行<code>git push</code>前的所有操作，都是在“本地仓库”中执行的。我们暂且将“本地仓库”的代码还原操作叫做“撤销”！</p> <p><strong>情况一：文件被修改了，但未执行<code>git add</code>操作（working tree内撤销）</strong></p> <pre><code class="prism language-shell">$<span class="token function">git</span> checkout fileName $<span class="token function">git</span> checkout<span class="token keyword">.</span></code></pre> <p><strong>情况二：同时对多个文件执行了<code>git add</code>操作，但本次只想提交其中一部分文件</strong></p> <pre><code class="prism language-shell">$<span class="token function">git</span> add * $<span class="token function">git</span> status<span class="token comment"># 取消暂存</span> $<span class="token function">git</span> reset HEAD<span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span></code></pre> <p><strong>情况三：文件执行了<code>git add</code>操作，但想撤销对其的修改（index内回滚）</strong></p> <pre><code class="prism language-shell"><span class="token comment"># 取消暂存</span> $<span class="token function">git</span> reset HEAD fileName<span class="token comment"># 撤销修改</span> $<span class="token function">git</span> checkout fileName</code></pre> <p><strong>情况四：修改的文件已被<code>git commit</code>，但想再次修改不再产生新的Commit</strong></p> <pre><code class="prism language-shell"><span class="token comment"># 修改最后一次提交</span> $<span class="token function">git</span> add sample.txt $<span class="token function">git</span> commit --amend -m<span class="token string">"说明"</span></code></pre> <p><strong>情况五：已在本地进行了多次<code>git commit</code>操作，现在想撤销到其中某次Commit</strong></p> <pre><code class="prism language-shell">$<span class="token function">git</span> reset<span class="token punctuation">[</span>--hard<span class="token operator">|</span>soft<span class="token operator">|</span>mixed<span class="token operator">|</span>merge<span class="token operator">|</span>keep<span class="token punctuation">]</span><span class="token punctuation">[</span>commit<span class="token operator">|</span>HEAD<span class="token punctuation">]</span></code></pre> <p>具体参数和使用说明，请查看：Git Pro深入浅出（二）中的重置揭秘部分</p> <h2>回滚</h2> <p>上述<strong>场景二</strong>，已进行<code>git push</code>，即已推送到“远程仓库”中。我们将已被提交到“远程仓库”的代码还原操作叫做“回滚”！<strong>注意：对远程仓库做回滚操作是有风险的，需提前做好备份和通知其他团队成员！</strong></p> <p><em>如果你每次更新线上，都会打tag，那恭喜你，你可以很快的处理上述<strong>场景二</strong>的情况</em></p> <pre><code class="prism language-shell">$<span class="token function">git</span> checkout<span class="token operator">&lt;</span>tag<span class="token operator">&gt;</span></code></pre> <p><em>如果你回到当前HEAD指向</em></p> <pre><code class="prism language-shell">$<span class="token function">git</span> checkout<span class="token operator">&lt;</span>branch_name<span class="token operator">&gt;</span></code></pre> <p><strong>情况一：撤销指定文件到指定版本</strong></p> <pre><code class="prism language-shell"><span class="token comment"># 查看指定文件的历史版本</span> $<span class="token function">git</span> log<span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span><span class="token comment"># 回滚到指定commitID</span> $<span class="token function">git</span> checkout<span class="token operator">&lt;</span>commitID<span class="token operator">&gt;</span><span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span></code></pre> <p><strong>情况二：删除最后一次远程提交</strong></p> <p><em>方式一：使用revert</em></p> <pre><code class="prism language-shell">$<span class="token function">git</span> revert HEAD $<span class="token function">git</span> push origin master</code></pre> <p><em>方式二：使用reset</em></p> <pre><code class="prism language-shell">$<span class="token function">git</span> reset --hard HEAD^ $<span class="token function">git</span> push origin master -f</code></pre> <p><em>二者区别：</em></p> <ul> <li><strong>revert</strong> 是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在；</li> <li><strong>reset</strong> 是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。</li> </ul> <p><strong>情况三：回滚某次提交</strong></p> <pre><code class="prism language-shell"><span class="token comment"># 找到要回滚的commitID</span> $<span class="token function">git</span> log $<span class="token function">git</span> revert commitID</code></pre> <h2>删除某次提交</h2> <pre><code class="prism language-shell">$<span class="token function">git</span> log --oneline -n5</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/a90991714ee69b9f1165d9cdc077120a.jpg" alt="Git撤销&amp;回滚操作"></p> <pre><code class="prism language-shell">$<span class="token function">git</span> rebase -i<span class="token string">"commit id"</span>^</code></pre> <p><strong>注意：</strong> 需要注意最后的*^*号，意思是commit id的前一次提交</p> <pre><code class="prism language-shell">$<span class="token function">git</span> rebase -i<span class="token string">"5b3ba7a"</span>^</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/c3f9d56cf378e88f9fb3b5fb6b1e6316.jpg" alt="Git撤销&amp;回滚操作"><br /> 在编辑框中删除相关commit，如<code>pick 5b3ba7a test2</code>，然后保存退出（如果遇到冲突需要先解决冲突）！</p> <pre><code class="prism language-shell">$<span class="token function">git</span> push origin master -f</code></pre> <p><strong>通过上述操作，如果你想对历史多个commit进行处理或者，可以选择<code>git rebase -i</code>，只需删除对应的记录就好。rebase还可对 commit 消息进行编辑，以及合并多个commit。</strong></p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-101933.htm">宠物粮食专卖店名称怎么取 宠物粮食专卖店名称怎么取名</a></p>
+                                        <p>下一个：<a href="/news/article-102761.htm">养猫最忌讳的一个生肖羊是什么动物（什么生肖养猫会有好运）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-93835.htm" title="让猫挠了轻微出血,打几针?（让猫挠了轻微出血多久***）">让猫挠了轻微出血,打几针?（让猫挠了轻微出血多久***）</a></li>
+                        <li class="py-2"><a href="/news/article-101185.htm" title="在上海开一家宠物店（上海开一家宠物店赚钱吗）">在上海开一家宠物店（上海开一家宠物店赚钱吗）</a></li>
+                        <li class="py-2"><a href="/news/article-98993.htm" title="猫咪三针疫苗多少钱（猫咪三针疫苗多少钱一共）">猫咪三针疫苗多少钱（猫咪三针疫苗多少钱一共）</a></li>
+                        <li class="py-2"><a href="/news/article-97557.htm" title="宠物粮食市场报告范文大全（宠物粮食市场报告范文大全）">宠物粮食市场报告范文大全（宠物粮食市场报告范文大全）</a></li>
+                        <li class="py-2"><a href="/news/article-96852.htm" title="动物疫苗现状如何（动物疫苗研究进展）">动物疫苗现状如何（动物疫苗研究进展）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-23-clash-v2ray-ss-ssr.htm" title="免费代理VPN | 4月23日19.5M/S|免费SSR/V2ray/Clash/Shadowrocket订阅机场">免费代理VPN | 4月23日19.5M/S|免费SSR/V2ray/Clash/Shadowrocket订阅机场</a></li>
+                        <li class="py-2"><a href="/news/article-103568.htm" title="python读取文件夹的文件名">python读取文件夹的文件名</a></li>
+                        <li class="py-2"><a href="/news/article-95371.htm" title="动物医疗有限公司起名大全 动物医疗有限公司起名大全及寓意">动物医疗有限公司起名大全 动物医疗有限公司起名大全及寓意</a></li>
+                        <li class="py-2"><a href="/news/article-93107.htm" title="global关键字  （如果需要在函数中修改全部变量，需要使用global 来声明全局变量）">global关键字  （如果需要在函数中修改全部变量，需要使用global 来声明全局变量）</a></li>
+                        <li class="py-2"><a href="/news/article-94606.htm" title="旋转矩阵与欧拉角的相互转换">旋转矩阵与欧拉角的相互转换</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">52</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-href="/assets/website/img/clash_nodes/footer.jpg" data-speed="0.8"></div>
+            <div class="footer_overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer_content text-center d-flex flex-column align-items-center justify-content-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                免费代理VPN 机场订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/assets/website/js/frontend/clash_nodes/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/css/clash_nodes/bootstrap-4.1.2/popper.js"></script>
+    <script src="/assets/website/css/clash_nodes/bootstrap-4.1.2/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/owl.carousel.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/easing/easing.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="/assets/website/js/frontend/clash_nodes/about.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
