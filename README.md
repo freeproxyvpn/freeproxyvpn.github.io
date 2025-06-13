@@ -1,4 +1,4 @@
-# 免费代理VPN | 6月4日21.9M/S|免费Clash/V2ray/Shadowrocket/SSR订阅机场  更新时间 2025-06-04 09:37:57
+# 免费代理VPN | 6月13日20.1M/S|免费V2ray/SSR/Shadowrocket/Clash订阅机场  更新时间 2025-06-13 09:19:59
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freeproxyvpn.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://freeproxyvpn.github.io/uploads/2025/06/0-20250604.yaml
-- https://freeproxyvpn.github.io/uploads/2025/06/1-20250604.yaml
-- https://freeproxyvpn.github.io/uploads/2025/06/2-20250604.yaml
-- https://freeproxyvpn.github.io/uploads/2025/06/3-20250604.yaml
-- https://freeproxyvpn.github.io/uploads/2025/06/4-20250604.yaml
+- https://freeproxyvpn.github.io/uploads/2025/06/0-20250613.yaml
+- https://freeproxyvpn.github.io/uploads/2025/06/1-20250613.yaml
+- https://freeproxyvpn.github.io/uploads/2025/06/2-20250613.yaml
+- https://freeproxyvpn.github.io/uploads/2025/06/3-20250613.yaml
+- https://freeproxyvpn.github.io/uploads/2025/06/4-20250613.yaml
 
 ### V2ray订阅链接
 
-- https://freeproxyvpn.github.io/uploads/2025/06/0-20250604.txt
-- https://freeproxyvpn.github.io/uploads/2025/06/1-20250604.txt
-- https://freeproxyvpn.github.io/uploads/2025/06/2-20250604.txt
-- https://freeproxyvpn.github.io/uploads/2025/06/3-20250604.txt
-- https://freeproxyvpn.github.io/uploads/2025/06/4-20250604.txt
+- https://freeproxyvpn.github.io/uploads/2025/06/0-20250613.txt
+- https://freeproxyvpn.github.io/uploads/2025/06/1-20250613.txt
+- https://freeproxyvpn.github.io/uploads/2025/06/2-20250613.txt
+- https://freeproxyvpn.github.io/uploads/2025/06/3-20250613.txt
+- https://freeproxyvpn.github.io/uploads/2025/06/4-20250613.txt
 
 ### Sing-box订阅链接
 
-- https://freeproxyvpn.github.io/uploads/2025/06/20250604.json
+- https://freeproxyvpn.github.io/uploads/2025/06/20250613.json
 
 ## 更多clash节点订阅 ：
 
