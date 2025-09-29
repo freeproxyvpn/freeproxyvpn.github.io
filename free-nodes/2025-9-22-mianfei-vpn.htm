@@ -114,7 +114,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="home_content">
-                                <div class="home_title">免费代理VPN | 9月22日18.6M/S|免费Clash/SSR/Shadowrocket/V2ray订阅机场</div>
+                                <div class="home_title">免费代理VPN | 9月22日18.6M/S|免费Clash节点/SSR/Shadowrocket节点/V2ray订阅机场</div>
                                 <div class="breadcrumbs">
                                     <ul class="d-flex flex-row align-items-center justify-content-start">
                                         <li><a href="/">首页</a></li>
@@ -160,8 +160,8 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅文件链接</h2><p>&nbsp;</p><p><strong>Clash订阅链接</strong></p><p>https://freeproxyvpn.github.io/uploads/2025/09/0-20250922.yaml</p><p>https://freeproxyvpn.github.io/uploads/2025/09/1-20250922.yaml</p><p>https://freeproxyvpn.github.io/uploads/2025/09/2-20250922.yaml</p><p>https://freeproxyvpn.github.io/uploads/2025/09/3-20250922.yaml</p><p>&nbsp;</p><p><strong>V2ray订阅链接:</strong></p><p>https://freeproxyvpn.github.io/uploads/2025/09/0-20250922.txt</p><p>https://freeproxyvpn.github.io/uploads/2025/09/1-20250922.txt</p><p>https://freeproxyvpn.github.io/uploads/2025/09/2-20250922.txt</p><p>https://freeproxyvpn.github.io/uploads/2025/09/4-20250922.txt</p><p><strong>Sing-Box订阅链接</strong></p><p>https://freeproxyvpn.github.io/uploads/2025/09/20250922.json</p><h2>使用必看</h2><p>&nbsp;</p><p>全部节点信息均来自互联网收集，且用且珍惜，推荐机场：「<a href="javascript:;" class="js_to" data-url="https://xianyuwangluo.top/#/register?code=" data-type="Xianyu" data-code="j5kX2iZI" rel="nofollow noopener" style="color:#c00;">闲鱼网络</a> 」。仅针对用于学习研究的用户分享，请勿随意传播其他信息。免费节点有效时间比较短，遇到失效是正常现象。</p><h2>从零开始：搬瓦工VPS搭配v2rayng打造手机专属代理的完整指南</h2>  <p>在当今数字化生活中，突破网络限制、保障隐私安全已成为刚需。本文将手把手教你如何通过搬瓦工VPS与v2rayng客户端的完美组合，在手机上搭建高效稳定的代理服务。无论你是技术小白还是资深玩家，这份长达2000字的终极指南都将成为你的通关秘籍。  </p>  <h2>一、为什么选择这个组合？</h2>  <p>搬瓦工（BandwagonHost）作为老牌VPS服务商，以其高性价比和稳定的线路著称。而v2rayng作为安卓平台最轻量化的V2Ray客户端，具有以下优势：<br /> - <strong>极简操作</strong>：可视化界面告别命令行恐惧<br /> - <strong>协议丰富</strong>：支持VMess、Shadowsocks等多种协议<br /> - <strong>流量伪装</strong>：可搭配WebSocket+TLS实现流量混淆<br /> - <strong>多平台支持</strong>：配置文件可跨设备同步使用  </p>  <p>这对黄金组合能让你的手机在任何网络环境下，都能获得堪比专线的代理体验。  </p>  <h2>二、前期准备：兵马未动粮草先行</h2>  <h3>1. 硬件环境检查</h3>  <p>确保你的安卓手机系统版本在7.0以上（建议安卓10+），并准备：<br /> - 稳定的WiFi/4G网络（配置过程需持续联网）<br /> - 备用电脑（用于SSH连接VPS时的应急操作）  </p>  <h3>2. 搬瓦工VPS选购技巧</h3>  <p>登录搬瓦工官网后，建议选择：<br /> - <strong>CN2 GIA线路</strong>（中国方向优化）<br /> - 内存≥512MB的套餐（运行V2Ray更流畅）<br /> - 年付套餐（通常有20%以上折扣）  </p>  <blockquote>   <p>实测数据：洛杉矶DC6机房的CN2 GIA线路，晚高峰延迟可控制在150ms以内  </p> </blockquote>  <h2>三、VPS部署：三分钟快速搭建</h2>  <h3>1. 获取服务器凭证</h3>  <p>购买成功后，在KiwiVM控制面板找到：<br /> - IPv4地址（如：104.207.xxx.xxx）<br /> - SSH端口（非默认22端口时需特别注意）<br /> - 随机root密码（建议立即修改）  </p>  <h3>2. 一键安装V2Ray</h3>  <p>使用JuiceSSH等工具连接服务器，执行：<br /> <code>bash bash &lt;(curl -sL https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</code><br /> 安装完成后，关键文件位置：<br /> - 配置文件：/usr/local/etc/v2ray/config.json<br /> - 日志文件：/var/log/v2ray/error.log  </p>  <h3>3. 生成UUID密钥</h3>  <p>运行以下命令获取唯一身份标识：<br /> <code>bash cat /proc/sys/kernel/random/uuid</code><br /> 示例输出：<code>d342d11e-d424-4ddd-924d-8d8e4e3bf001</code>  </p>  <h2>四、手机端v2rayng配置详解</h2>  <h3>1. 客户端安装</h3>  <p>通过以下渠道获取正版应用：<br /> - <a href="https://github.com/2dust/v2rayNG/releases">GitHub Releases</a>（推荐v1.8.4+版本）<br /> - 酷安应用市场（国内用户）  </p>  <p>安装时注意授予「VPN权限」和「本地网络访问权限」。  </p>  <h3>2. 核心参数配置</h3>  <p>点击右下角「+」号选择「手动输入」，关键字段说明：  </p>  <p>| 参数项       | 示例值                  | 注意事项                  | |--------------|-------------------------|---------------------------| | 别名         | 我的洛杉矶节点          | 建议标注机房位置          | | 地址         | 104.207.xxx.xxx         | 禁止包含http://前缀       | | 端口         | 443                     | 需与服务器config.json一致 | | 用户ID       | d342d11e-d424...        | 必须使用生成的UUID        | | 加密方式     | aes-128-gcm             | 老设备选chacha20-poly1305| | 传输协议     | ws                      | 抗封锁性最佳              | | 伪装域名     | cdn.aliyun.com          | 填写真实存在的域名        |</p>  <h3>3. 高级设置优化</h3>  <p>点击「路由设置」启用：<br /> - <strong>绕过中国大陆IP</strong>（节省代理流量）<br /> - <strong>开启Mux多路复用</strong>（提升并发性能）  </p>  <h2>五、性能调优与故障排查</h2>  <h3>1. 速度测试对比</h3>  <p>使用「全球ping测试」功能检测不同时段延迟：  </p>  <p>| 时间段   | 直连延迟 | 代理延迟 | 速度衰减 | |----------|----------|----------|----------| | 早高峰   | 280ms    | 320ms    | 14%      | | 凌晨     | 160ms    | 180ms    | 12%      |</p>  <h3>2. 常见错误解决方案</h3>  <p><strong>问题1</strong>：连接成功但无法上网<br /> - 检查VPS防火墙：<code>ufw allow 443/tcp</code><br /> - 验证DNS设置：建议使用<code>1.1.1.1</code>或<code>8.8.4.4</code>  </p>  <p><strong>问题2</strong>：频繁断线重连<br /> - 关闭电池优化：设置→应用→v2rayng→电池→无限制<br /> - 修改心跳间隔：高级设置→AlterID改为16  </p>  <h2>六、安全增强方案</h2>  <h3>1. TLS证书配置</h3>  <p>通过acme.sh申请Let's Encrypt证书：<br /> <code>bash curl https://get.acme.sh | sh acme.sh --issue -d yourdomain.com --standalone</code>  </p>  <h3>2. 流量混淆建议</h3>  <p>在「传输设置」中启用：<br /> - WebSocket路径：<code>/ray</code><br /> - HTTP头部Host：<code>www.bing.com</code>  </p>  <h2>七、专家级技巧</h2>  <ol> <li><strong>多节点负载均衡</strong>：添加3个同区域节点后，启用「延迟基准测试」自动选优  </li> <li><strong>规则分流</strong>：为Telegram等应用设置独立代理规则  </li> <li><strong>流量统计</strong>：在VPS安装vnStat监控月度用量  </li> </ol>  <h2>终极点评</h2>  <p>这套方案的魅力在于其<strong>精妙的平衡艺术</strong>：搬瓦工提供扎实的硬件基础，v2rayng则像一位技艺高超的指挥家，将复杂的网络协议转化为流畅的用户体验。相比传统SSR方案，其优势凸显在：  </p>  <ul> <li><strong>隐蔽性</strong>：WebSocket+TLS组合使流量与正常HT请求无异  </li> <li><strong>适应性</strong>：智能路由规则可应对不同应用场景需求  </li> <li><strong>经济性</strong>：年付$49.99的套餐即可满足4K视频流畅播放  </li> </ul>  <p>正如一位资深极客所言："这不再是简单的翻墙工具，而是一场关于网络自由的精密工程。" 当你完成所有配置，看着状态栏亮起的VPN图标时，那种掌控数字世界的成就感，或许正是技术带给我们的最美妙礼物。  </p>  <blockquote>   <p>最后提醒：请严格遵守所在地法律法规，技术应当用于促进信息自由而非破坏网络秩序。合理使用工具，方能真正享受科技红利。</p> </blockquote>                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/free-nodes/2025-9-21-free-vpn-node.htm">免费代理VPN | 9月21日22.7M/S|免费Shadowrocket/V2ray/SSR/Clash订阅机场</a></p>
-                                        <p>下一个：<a href="/free-nodes/2025-9-23-mianfei-vpn.htm">免费代理VPN | 9月23日22.8M/S|免费Clash/V2ray/SSR/Shadowrocket订阅机场</a></p>
+                                        <p>上一个：<a href="/free-nodes/2025-9-21-free-vpn-node.htm">免费代理VPN | 9月21日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash订阅机场</a></p>
+                                        <p>下一个：<a href="/free-nodes/2025-9-23-mianfei-vpn.htm">免费代理VPN | 9月23日22.8M/S|免费Clash节点/V2ray节点/SSR/Shadowrocket订阅机场</a></p>
                                     </div>
                                 <div class="panel panel-default mt-5">
                     <div class="panel-heading">
@@ -169,16 +169,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                     </div>
                     <div class="panel-body">
                         <ul class="p-0 x-0">
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-21-free-vpn-node.htm">免费代理VPN | 9月21日22.7M/S|免费Shadowrocket/V2ray/SSR/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-20-free-vpn.htm">免费代理VPN | 9月20日22.2M/S|免费Shadowrocket/SSR/V2ray/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-19-free-vpn-node.htm">免费代理VPN | 9月19日18.6M/S|免费Shadowrocket/SSR/V2ray/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-18-share-vpn.htm">免费代理VPN | 9月18日18.5M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-17-node-share-links.htm">免费代理VPN | 9月17日18.7M/S|免费V2ray/SSR/Shadowrocket/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-16-mianfei-vpn.htm">免费代理VPN | 9月16日18.5M/S|免费SSR/Clash/V2ray/Shadowrocket订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-15-vpn-proxy.htm">免费代理VPN | 9月15日20.2M/S|免费V2ray/Shadowrocket/SSR/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-14-node-share.htm">免费代理VPN | 9月14日22.4M/S|免费Shadowrocket/SSR/V2ray/Clash订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-node-subscribe.htm">免费代理VPN | 9月13日21.4M/S|免费V2ray/Shadowrocket/Clash/SSR订阅机场</a></li>
-                                                        <li class="py-2"><a href="/free-nodes/2025-9-12-vpn-github.htm">免费代理VPN | 9月12日22.3M/S|免费Clash/V2ray/SSR/Shadowrocket订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-21-free-vpn-node.htm">免费代理VPN | 9月21日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-20-free-vpn.htm">免费代理VPN | 9月20日22.2M/S|免费Shadowrocket节点/SSR/V2ray节点/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-19-free-vpn-node.htm">免费代理VPN | 9月19日18.6M/S|免费Shadowrocket节点/SSR/V2ray节点/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-18-share-vpn.htm">免费代理VPN | 9月18日18.5M/S|免费Shadowrocket节点/Clash节点/SSR/V2ray订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-17-node-share-links.htm">免费代理VPN | 9月17日18.7M/S|免费V2ray节点/SSR/Shadowrocket节点/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-16-mianfei-vpn.htm">免费代理VPN | 9月16日18.5M/S|免费SSR/Clash节点/V2ray节点/Shadowrocket订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-15-vpn-proxy.htm">免费代理VPN | 9月15日20.2M/S|免费V2ray节点/Shadowrocket节点/SSR/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-14-node-share.htm">免费代理VPN | 9月14日22.4M/S|免费Shadowrocket节点/SSR/V2ray节点/Clash订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-node-subscribe.htm">免费代理VPN | 9月13日21.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR订阅机场</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-12-vpn-github.htm">免费代理VPN | 9月12日22.3M/S|免费Clash节点/V2ray节点/SSR/Shadowrocket订阅机场</a></li>
                                                     </ul>
                     </div>
                 </div>
@@ -192,16 +192,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-9-8-free-vpn-node.htm" title="免费代理VPN | 9月8日21.8M/S|免费V2ray/Clash/SSR/Shadowrocket订阅机场">免费代理VPN | 9月8日21.8M/S|免费V2ray/Clash/SSR/Shadowrocket订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-22-mianfei-vpn.htm" title="免费代理VPN | 9月22日18.6M/S|免费Clash/SSR/Shadowrocket/V2ray订阅机场">免费代理VPN | 9月22日18.6M/S|免费Clash/SSR/Shadowrocket/V2ray订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-31-node-share-links.htm" title="免费代理VPN | 8月31日22.6M/S|免费V2ray/Shadowrocket/SSR/Clash订阅机场">免费代理VPN | 8月31日22.6M/S|免费V2ray/Shadowrocket/SSR/Clash订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-7-node-share-links.htm" title="VPN for Chrome | 8月7日20.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅机场">VPN for Chrome | 8月7日20.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-22-top-vpn-node.htm" title="免费代理VPN | 8月22日19.7M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场">免费代理VPN | 8月22日19.7M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-17-node-share-links.htm" title="免费代理VPN | 9月17日18.7M/S|免费V2ray/SSR/Shadowrocket/Clash订阅机场">免费代理VPN | 9月17日18.7M/S|免费V2ray/SSR/Shadowrocket/Clash订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-9-9-vpn-github.htm" title="免费代理VPN | 9月9日20.9M/S|免费Clash/Shadowrocket/V2ray/SSR订阅机场">免费代理VPN | 9月9日20.9M/S|免费Clash/Shadowrocket/V2ray/SSR订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-27-vpn-node.htm" title="免费代理VPN | 8月27日21.7M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场">免费代理VPN | 8月27日21.7M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-24-free-vpn.htm" title="免费代理VPN | 8月24日21.1M/S|免费Clash/SSR/Shadowrocket/V2ray订阅机场">免费代理VPN | 8月24日21.1M/S|免费Clash/SSR/Shadowrocket/V2ray订阅机场</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-15-share-vpn.htm" title="VPN for Chrome | 8月15日19.5M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场">VPN for Chrome | 8月15日19.5M/S|免费Shadowrocket/Clash/SSR/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-16-free-node-subscribe-links.htm" title="VPN for Chrome | 8月16日21.8M/S|免费V2ray节点/SSR/Shadowrocket节点/Clash订阅机场">VPN for Chrome | 8月16日21.8M/S|免费V2ray节点/SSR/Shadowrocket节点/Clash订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-18-share-vpn.htm" title="免费代理VPN | 9月18日18.5M/S|免费Shadowrocket节点/Clash节点/SSR/V2ray订阅机场">免费代理VPN | 9月18日18.5M/S|免费Shadowrocket节点/Clash节点/SSR/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-22-mianfei-vpn.htm" title="免费代理VPN | 9月22日18.6M/S|免费Clash节点/SSR/Shadowrocket节点/V2ray订阅机场">免费代理VPN | 9月22日18.6M/S|免费Clash节点/SSR/Shadowrocket节点/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-21-mianfei-vpn.htm" title="VPN for Chrome | 8月21日22.7M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅机场">VPN for Chrome | 8月21日22.7M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-5-free-vpn-node.htm" title="VPN for Chrome | 8月5日18.3M/S|免费Clash节点/SSR/Shadowrocket节点/V2ray订阅机场">VPN for Chrome | 8月5日18.3M/S|免费Clash节点/SSR/Shadowrocket节点/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-28-node-share-links.htm" title="免费代理VPN | 9月28日18.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点订阅机场">免费代理VPN | 9月28日18.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-25-mianfei-vpn.htm" title="免费代理VPN | 8月25日22.4M/S|免费SSR/Clash节点/Shadowrocket节点/V2ray订阅机场">免费代理VPN | 8月25日22.4M/S|免费SSR/Clash节点/Shadowrocket节点/V2ray订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-3-vpn-github.htm" title="免费代理VPN | 9月3日20.6M/S|免费SSR/V2ray节点/Clash节点/Shadowrocket订阅机场">免费代理VPN | 9月3日20.6M/S|免费SSR/V2ray节点/Clash节点/Shadowrocket订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-23-top-vpn.htm" title="免费代理VPN | 8月23日21.7M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR订阅机场">免费代理VPN | 8月23日21.7M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR订阅机场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-21-free-vpn-node.htm" title="免费代理VPN | 9月21日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash订阅机场">免费代理VPN | 9月21日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR/Clash订阅机场</a></li>
                     </ul>
     </div>
 </div>
@@ -213,7 +213,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
