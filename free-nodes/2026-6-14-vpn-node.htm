@@ -274,22 +274,13 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-6-13-free-vpn.htm">免费代理VPN | 6月13日22.4M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点订阅机场</a></p>
+        <p>下一个：<a href="/free-nodes/2026-6-15-vpn-github.htm">免费代理VPN | 6月15日20.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点订阅机场</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的订阅更新支持自动导入节点吗？</h5></div>
+    <div class="panel-heading"><h5>Trojan 服务器如何防止被扫描到真实 IP？</h5></div>
     <div class="panel-body">
-        支持。Nekoray 可以通过订阅 URL 自动下载节点，并根据用户配置更新本地节点列表。定期更新确保节点始终可用，减少手动维护的麻烦，提高使用便利性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的多节点测速机制是怎样的？</h5></div>
-    <div class="panel-body">
-        Matsuri 使用并发测速机制，可同时对多个节点进行延迟与带宽测试。测试结果会自动排序，并可根据延迟或速度自动切换最优节点，提升连接体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何优化访问？</h5></div>
-    <div class="panel-body">
-        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
+        可以把 Trojan 部署在反向代理或 CDN 后端，使用 CDN 的中转与域名伪装；同时避免在服务器上暴露其他与域名不匹配的服务，关闭 FTP/SSH 直连并设置防火墙白名单。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 是否可以手动管理多个节点？</h5></div>
@@ -297,19 +288,9 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
         支持。用户可以手动输入节点参数或扫描二维码导入节点，并可进行修改或删除。虽然不支持订阅自动更新，但足够满足轻量用户对节点管理和分流的基本需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 服务器如何防止被扫描到真实 IP？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何优化访问？</h5></div>
     <div class="panel-body">
-        可以把 Trojan 部署在反向代理或 CDN 后端，使用 CDN 的中转与域名伪装；同时避免在服务器上暴露其他与域名不匹配的服务，关闭 FTP/SSH 直连并设置防火墙白名单。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的 TCP/UDP 分流适合哪些应用？</h5></div>
-    <div class="panel-body">
-        TCP 分流适合网页、下载和视频播放，UDP 分流适合游戏、语音和实时视频。Netch 可同时代理 TCP 和 UDP 流量，实现精准分流，保证不同应用的最佳性能。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
-    <div class="panel-body">
-        在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
+        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何把 Clash 规则与本地 hosts 文件结合使用？</h5></div>
@@ -317,14 +298,34 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
         可在 Clash 的 rules 中优先设置域名直连规则，并在系统 hosts 中添加常用站点的固定解析以加速 DNS 解析。注意 hosts 优先级高于 DNS，因此修改 hosts 需谨慎以避免与真实解析冲突。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的多节点测速机制是怎样的？</h5></div>
+    <div class="panel-body">
+        Matsuri 使用并发测速机制，可同时对多个节点进行延迟与带宽测试。测试结果会自动排序，并可根据延迟或速度自动切换最优节点，提升连接体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 的端口不可达怎么办？</h5></div>
     <div class="panel-body">
         检查服务器防火墙是否开放对应端口，同时确认客户端和服务器端端口一致。还可以尝试更换节点或端口，确保 TLS 证书有效以保证连接成功。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的订阅更新支持自动导入节点吗？</h5></div>
+    <div class="panel-body">
+        支持。Nekoray 可以通过订阅 URL 自动下载节点，并根据用户配置更新本地节点列表。定期更新确保节点始终可用，减少手动维护的麻烦，提高使用便利性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
+    <div class="panel-body">
+        在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 如何结合 Xray 内核实现多协议支持？</h5></div>
     <div class="panel-body">
-        Matsuri 可加载 Xray 核心，通过配置多 inbound/outbound 模块实现 VMess、VLess、Trojan 等协议共存。用户可在单一服务端配置文件中同时支持多客户端访问，便于统一管理。    </div>
+        Matsuri 可加载 Xray 核心，通过配置多 inbound/outbound 模块实现 VMess、VLess、Trojan 等协议共存。用户可在单一服务端配置文件中同时支持多客户端访问，便于统一管理。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 的 TCP/UDP 分流适合哪些应用？</h5></div>
+    <div class="panel-body">
+        TCP 分流适合网页、下载和视频播放，UDP 分流适合游戏、语音和实时视频。Netch 可同时代理 TCP 和 UDP 流量，实现精准分流，保证不同应用的最佳性能。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -376,16 +377,16 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-6-12-node-share.htm" title="免费代理VPN | 6月12日18.7M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点订阅机场">免费代理VPN | 6月12日18.7M/S|免费Singbox节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-5-node-share.htm" title="免费代理VPN | 6月5日19.4M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点订阅机场">免费代理VPN | 6月5日19.4M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-12-vpn-node.htm" title="免费代理VPN | 5月12日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点订阅机场">免费代理VPN | 5月12日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-11-vpn-github.htm" title="免费代理VPN | 6月11日19M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅机场">免费代理VPN | 6月11日19M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-15-vpn-node.htm" title="免费代理VPN | 5月15日22.5M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点订阅机场">免费代理VPN | 5月15日22.5M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点订阅机场</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-13-share-vpn.htm" title="免费代理VPN | 5月13日21.7M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点订阅机场">免费代理VPN | 5月13日21.7M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-16-free-vpn-node.htm" title="免费代理VPN | 5月16日19.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅机场">免费代理VPN | 5月16日19.3M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-4-top-vpn.htm" title="免费代理VPN | 6月4日20.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点订阅机场">免费代理VPN | 6月4日20.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-23-share-vpn.htm" title="免费代理VPN | 5月23日18.4M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅机场">免费代理VPN | 5月23日18.4M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-18-mianfei-vpn.htm" title="免费代理VPN | 5月18日21.2M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅机场">免费代理VPN | 5月18日21.2M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-8-mianfei-vpn.htm" title="免费代理VPN | 5月8日20.5M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点订阅机场">免费代理VPN | 5月8日20.5M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-10-node-share.htm" title="免费代理VPN | 6月10日22.7M/S|免费Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点订阅机场">免费代理VPN | 6月10日22.7M/S|免费Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-2-node-share-links.htm" title="免费代理VPN | 6月2日21.4M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅机场">免费代理VPN | 6月2日21.4M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-21-vpn-github.htm" title="免费代理VPN | 6月21日21.7M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点订阅机场">免费代理VPN | 6月21日21.7M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Clash节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-25-top-vpn-node.htm" title="免费代理VPN | 5月25日21.9M/S|免费Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点订阅机场">免费代理VPN | 5月25日21.9M/S|免费Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-26-vpn-free.htm" title="免费代理VPN | 5月26日18.7M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅机场">免费代理VPN | 5月26日18.7M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-12-vpn-node.htm" title="免费代理VPN | 5月12日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点订阅机场">免费代理VPN | 5月12日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-21-free-vpn-node.htm" title="免费代理VPN | 5月21日18.1M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点订阅机场">免费代理VPN | 5月21日18.1M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-17-vpn-free.htm" title="免费代理VPN | 5月17日22.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点订阅机场">免费代理VPN | 5月17日22.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点订阅机场</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -397,7 +398,7 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
