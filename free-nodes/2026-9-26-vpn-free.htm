@@ -301,36 +301,6 @@ A4：理论上可运行，但性能受限，建议尽量使用性能较好的设
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的多策略组能带来什么优势？</h5></div>
-    <div class="panel-body">
-        多策略组可将节点按用途或地域分类，结合路由规则实现精准分流。用户无需频繁切换节点即可自动使用最佳线路，提高网络访问效率和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名如何选择更安全？</h5></div>
-    <div class="panel-body">
-        伪装域名应选择真实可访问的网站，且证书有效。这样 Trojan 流量能伪装成正常 HTTPS 请求，减少被封锁或检测的风险，提高节点安全性和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 对高延迟网络有哪些优化？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手和加密开销，适合高延迟或不稳定网络环境。结合策略组和节点切换，可提高网页浏览、视频播放和游戏的稳定性和流畅度，改善用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持自定义 DNS 解析？</h5></div>
-    <div class="panel-body">
-        支持。用户可以在配置中指定 DNS 服务器或启用 DoH/DoT 功能，确保域名解析安全和快速，避免本地 DNS 污染或被劫持。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的节点延迟测量如何帮助选择节点？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会测试节点延迟和丢包率，并根据结果排序。用户可快速选择延迟最低的节点访问网站或视频，提高连接速度和稳定性，优化整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的 DNS 模块如何工作？</h5></div>
     <div class="panel-body">
         Sing-box 内置 DNS 模块，支持 fake-ip 模式和纯直连模式。它可根据规则选择不同的上游 DNS 服务，从而实现国内外域名智能分流，减少访问延迟。<hr />    </div>
@@ -344,6 +314,36 @@ A4：理论上可运行，但性能受限，建议尽量使用性能较好的设
     <div class="panel-heading"><h5>WinXray 支持 Hysteria 协议吗？</h5></div>
     <div class="panel-body">
         新版本的 WinXray 已整合了 V2Ray 内核更新，支持 Hysteria 协议。用户可通过导入 Clash 或 sing-box 类型的订阅使用基于 QUIC 的高性能连接，速度和稳定性均更出色。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的多策略组能带来什么优势？</h5></div>
+    <div class="panel-body">
+        多策略组可将节点按用途或地域分类，结合路由规则实现精准分流。用户无需频繁切换节点即可自动使用最佳线路，提高网络访问效率和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的节点延迟测量如何帮助选择节点？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 会测试节点延迟和丢包率，并根据结果排序。用户可快速选择延迟最低的节点访问网站或视频，提高连接速度和稳定性，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的伪装域名如何选择更安全？</h5></div>
+    <div class="panel-body">
+        伪装域名应选择真实可访问的网站，且证书有效。这样 Trojan 流量能伪装成正常 HTTPS 请求，减少被封锁或检测的风险，提高节点安全性和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否支持自定义 DNS 解析？</h5></div>
+    <div class="panel-body">
+        支持。用户可以在配置中指定 DNS 服务器或启用 DoH/DoT 功能，确保域名解析安全和快速，避免本地 DNS 污染或被劫持。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 对高延迟网络有哪些优化？</h5></div>
+    <div class="panel-body">
+        XTLS 模式减少握手和加密开销，适合高延迟或不稳定网络环境。结合策略组和节点切换，可提高网页浏览、视频播放和游戏的稳定性和流畅度，改善用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 的节点排序依据是什么？</h5></div>
@@ -398,16 +398,16 @@ A4：理论上可运行，但性能受限，建议尽量使用性能较好的设
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-9-5.htm" title="免费代理VPN | 9月5日22.9M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场">免费代理VPN | 9月5日22.9M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-8-11.htm" title="免费代理VPN | 8月11日19.1M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点订阅机场">免费代理VPN | 8月11日19.1M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-20-top-vpn-node.htm" title="免费代理VPN | 8月20日19.8M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点订阅机场">免费代理VPN | 8月20日19.8M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-9.htm" title="免费代理VPN | 8月9日21.9M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点订阅机场">免费代理VPN | 8月9日21.9M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-vpn-proxy.htm" title="免费代理VPN | 9月14日21.7M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点订阅机场">免费代理VPN | 9月14日21.7M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-vpn-node.htm" title="免费代理VPN | 9月22日21.4M/S|免费SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/Clash节点订阅机场">免费代理VPN | 9月22日21.4M/S|免费SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/Clash节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-9-3.htm" title="免费代理VPN | 9月3日20.8M/S|免费Trojan节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点订阅机场">免费代理VPN | 9月3日20.8M/S|免费Trojan节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-9.htm" title="免费代理VPN | 9月9日22M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅机场">免费代理VPN | 9月9日22M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-8-7.htm" title="免费代理VPN | 8月7日19.8M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点订阅机场">免费代理VPN | 8月7日19.8M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-25.htm" title="免费代理VPN | 9月25日22.6M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点订阅机场">免费代理VPN | 9月25日22.6M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-15.htm" title="免费代理VPN | 9月15日22.8M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅机场">免费代理VPN | 9月15日22.8M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-1.htm" title="免费代理VPN | 10月1日21.4M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场">免费代理VPN | 10月1日21.4M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-vpn-node.htm" title="免费代理VPN | 9月4日22.7M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点订阅机场">免费代理VPN | 9月4日22.7M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-7.htm" title="免费代理VPN | 9月7日20.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点订阅机场">免费代理VPN | 9月7日20.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="免费代理VPN | 9月2日22.5M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅机场">免费代理VPN | 9月2日22.5M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-free-node-subscribe.htm" title="免费代理VPN | 9月30日18.2M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点订阅机场">免费代理VPN | 9月30日18.2M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-21.htm" title="免费代理VPN | 9月21日21.6M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点订阅机场">免费代理VPN | 9月21日21.6M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-9-19.htm" title="免费代理VPN | 9月19日21.5M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点订阅机场">免费代理VPN | 9月19日21.5M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-free-node-subscribe.htm" title="免费代理VPN | 9月10日18.2M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅机场">免费代理VPN | 9月10日18.2M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-9-23.htm" title="免费代理VPN | 9月23日18.8M/S|免费Singbox节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/V2ray节点订阅机场">免费代理VPN | 9月23日18.8M/S|免费Singbox节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -419,10 +419,10 @@ A4：理论上可运行，但性能受限，建议尽量使用性能较好的设
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                     </ul>
     </div>
